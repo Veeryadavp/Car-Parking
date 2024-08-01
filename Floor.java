@@ -40,5 +40,25 @@ public List<Slot> getFreeSlots(String vehType)
     }
     return freeSlots;
 }
+public List<Slot> getOccupiedSlots(String vehType)
+{
+    List<Slot> occupiedSlots=new ArrayList<>();
+    for(Slot slots:slots)
+    {
+        if(slots.getSlotType().equals(vehType) && slots.getIsOccupied())
+        {
+            occupiedSlots.add(slots);
+        }
+    }
+    return occupiedSlots;
+}
 
+public int getFreeCount(String vehType)
+{
+    return getFreeSlots(vehType).size();
+}
+public int getFloorNo()
+{
+    return floorNo;
+}
 }

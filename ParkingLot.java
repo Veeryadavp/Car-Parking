@@ -12,5 +12,19 @@ public class ParkingLot {
             floors.add(new Floor(i, slotsPerFloor));
         }
     }
+public String findAndParkVehicle(Vehicle vehicle)
+{
+    for(Floor floor:floors)
+    {
+        for(Slot slot:floor.getFreeSlots(vehicle.getVehType()))
+        {
+            if(slot.parkVehicle(vehicle))
+                return String.format(" Parked Vehicle, Ticke-ID: %s_%d_%d", id, floor.getFloorNo(), slot.getSlotNo());
+        }
+    }
+    return "Parking is Full";
+}
+
+
 
 }

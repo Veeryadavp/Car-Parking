@@ -20,6 +20,24 @@ public class ParkingLotManager
         System.out.println(result);
     }
 
+    public void display(String displayType, String vehType)
+    {
+        switch(displayType)
+        {
+            case "Free-counts":
+                parkinglot.displayFreeCount(vehType);
+                break;
+            case "Free-Slots":
+                parkinglot.displayFreeSlots(vehType);
+                break;
+            case "Occupied-Slots":
+                parkinglot.displayOccupiedSlots(vehType);
+                break;
+            default:
+                System.out.println("Inavaid display type");
+                break;
+        }
+    }
 
 
 }

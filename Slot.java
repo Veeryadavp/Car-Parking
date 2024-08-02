@@ -5,7 +5,7 @@ private String slotType;
 private boolean isOccupied;
 private Vehicle vehicle;
 
-public Slot(int slotNo, String slotType, boolean isOccupied, Vehicle vehicle)
+public Slot(int slotNo, String slotType)
 {
     this.slotNo = slotNo;
     this.slotType = slotType;

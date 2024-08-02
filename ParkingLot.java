@@ -48,7 +48,7 @@ public String  unParkVehicle(String ticketId)
  {
      for(Floor floor:floors)
      {
-         System.out.println("No of slots  for %s on floor %s: %s%n",vehType, floor.getFloorNo(), floor.getFreeCount(String vehType));
+         System.out.printf("No of slots  for %s on floor %s: %s%n",vehType, floor.getFloorNo(), floor.getFreeCount(vehType));
      }
  }
 
@@ -57,7 +57,7 @@ public String  unParkVehicle(String ticketId)
      for(Floor floor:floors)
      {
          List<Slot> Slots=floor.getFreeSlots(vehType);
-         System.out.println("Free slots for %s on the floor %s: %s%n",vehType, floor.getFloorNo(), formatSlotNumber(Slots));
+         System.out.printf("Free slots for %s on the floor %s: %s%n",vehType, floor.getFloorNo(), formatSlotNumber(Slots));
      }
  }
  public void displayOccupiedSlots(String vehType)
@@ -65,7 +65,7 @@ public String  unParkVehicle(String ticketId)
      for(Floor floor:floors)
      {
          List<Slot> occupiedSlot=floor.getOccupiedSlots(vehType);
-         System.out.println("Occupied slots for %s on floor %s: %s%n",vehType, floor.getFloorNo(), formatSlotNumber(occupiedSlot));
+         System.out.printf("Occupied slots for %s on floor %s: %s%n",vehType, floor.getFloorNo(), formatSlotNumber(occupiedSlot));
      }
  }
  public String formatSlotNumber(List<Slot> slot)

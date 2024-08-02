@@ -8,9 +8,9 @@ public class ParkingLotManager
         System.out.printf("Parking-Lot of %d floors with %d slots%n" , noFloors, slotsInFloor );
     }
 
-    public void parkVehicle(String regNo, String VehType, String vehColor )
+    public void parkVehicle( String VehType, String regNo, String vehColor )
     {
-        Vehicle vehicle= new Vehicle(regNo, VehType, vehColor);
+        Vehicle vehicle= new Vehicle( VehType, regNo, vehColor);
         String S=parkinglot.findAndParkVehicle(vehicle);
         System.out.println(S);
     }

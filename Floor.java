@@ -8,14 +8,14 @@ public class Floor {
 
     public Floor(int floorNo, int numOfSlots) {
         this.floorNo = floorNo;
-        slots = new ArrayList<>();
+        this.slots = new ArrayList<>();
         for (int i = 1; i <= numOfSlots; i++) {
             if (i == 1) {
                 slots.add(new Slot(i, "Truck"));
             } else if (i == 2 || i == 3) {
                 slots.add(new Slot(i, "Bike"));
             } else {
-                slots.add(new Slot(i, "Cars"));
+                slots.add(new Slot(i, "Car"));
             }
         }
 

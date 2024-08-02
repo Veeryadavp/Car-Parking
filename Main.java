@@ -13,13 +13,13 @@ public static void main(String[] args)
         String command = parts[0];
 
         switch (command) {
-            case "Create-parking-Lot":
+            case "Create-Parking-Lot":
                 manager.createParkingLot(parts[1], Integer.parseInt(parts[2]), Integer.parseInt(parts[3]));
                 break;
             case "park-vehicle":
                 manager.parkVehicle(parts[1], parts[2], parts[3]);
                 break;
-            case "Un-park-vehicle":
+            case "unpark-vehicle":
                 manager.unPark(parts[1]);
                 break;
             case "Display":

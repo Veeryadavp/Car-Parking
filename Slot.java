@@ -9,8 +9,8 @@ public Slot(int slotNo, String slotType)
 {
     this.slotNo = slotNo;
     this.slotType = slotType;
-    this.isOccupied = isOccupied;
-    this.vehicle = vehicle;
+    this.isOccupied = false;
+    this.vehicle = null;
 }
 
 public boolean parkVehicle(Vehicle vehicle)

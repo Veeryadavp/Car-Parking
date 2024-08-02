@@ -4,7 +4,7 @@ public class Vehicle
     private String vehColor;
     private String vehType;
 
-    public Vehicle(String regNo, String vehColor, String vehType)
+    public Vehicle( String vehType, String regNo, String vehColor)
     {
         this.regNo=regNo;
         this.vehColor=vehColor;
